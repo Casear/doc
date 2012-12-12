@@ -1,0 +1,86 @@
+extends layout
+
+block content
+    script
+        $(function(){
+            $('#presentation').fathom();
+        });
+    div#presentation
+        div.slide
+            div.content
+                h1='Node.js and XMPP'
+                     
+        div.slide
+            div.content
+                h1='What is XMPP?'
+                p Extensible Messaging and Presence Protocol
+                p Jabber
+                p RFC 3921 -> RFC 6120
+                p socket ,support tls
+             
+        div.slide
+            div.content
+                h1='XMPP or WebSocket'
+                p BOSH and WebSocket
+            
+        div.slide
+            div.content
+                h1='SRV Query'
+                p _xmpp-client._tcp.example.net
+        
+        div.slide
+            div.content
+                h1='RECONNECT'
+                p Set a interval
+        div.slide
+            div.content
+                h1='C2S'
+                p Client To Server
+        div.slide
+            div.content
+                h1='S2S'
+                p Server To Server
+     
+        div.slide
+            div.content
+                h1='XMP Tag'
+                p stream
+                p iq
+                p message
+                p presence
+         
+        div.slide
+            div.content
+                h1='Stream'
+                p client 
+                pre
+                    <?xml version='1.0'?>
+                    <stream:stream from='juliet@im.example.com' to='im.example.com' version='1.0' xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'>
+                p server
+                pre
+                   <?xml version='1.0'?>
+                   <stream:stream from='im.example.com' id='++TR84Sm6A3hnt3Q065SnAbbk3Y=' to='juliet@im.example.com' version='1.0' xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'>
+
+        div.slide
+            div.content
+                h1='Stream'
+                p server 
+                pre
+                    <stream:features>
+                    <starttls xmlns='urn:ietf:params:xml:ns:xmpp-tls'>
+                    <required/>
+                    </starttls>
+                    </stream:features>
+
+                   
+        div.slide
+            div.content
+                h1='Item Query'
+                p client
+                pre 
+                    <iq to='bar' type='get'><query/></iq>
+                p server
+                pre
+                    <iq from='bar' type='result'><query/></iq>
+
+        
