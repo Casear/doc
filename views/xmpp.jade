@@ -17,11 +17,6 @@ block content
                 p Jabber
                 p RFC 3921 -> RFC 6120
                 p socket ,support tls
-             
-        div.slide
-            div.content
-                h1='XMPP or WebSocket'
-                p BOSH and WebSocket
             
         div.slide
             div.content
@@ -82,5 +77,29 @@ block content
                 p server
                 pre
                     <iq from='bar' type='result'><query/></iq>
+        div.slide
+            div.content
+                h1='BOSH'
+                p http://xmpp.org/extensions/xep-0124.html
+                p bidirectional-streams-over-synchronous-http
+                p firewall friendly
+        div.slide
+            div.content
+                h1='BOSH or WebSocket'
+                p No , long polling and websocket
+                p latency
+                p small-packet overhead
+                p complexity
 
-        
+        div.slide
+            div.content
+                h1='Client'
+                li JSJaC
+                li strophe.js
+        div.slide
+            div.content
+                h1='Facebook Example'
+                p https://github.com/kissrobber/facebook_chat_with_javascript_on_node.js
+                p http://nodebosh.herokuapp.com/facebook.html
+                p bosh and strophe.js
+
